@@ -1,8 +1,16 @@
+// Simulando gasolina
+
 class Carro {
     constructor(marca,cor,gasolina){
         this.marca = marca;
         this.cor = cor;
         this.gasolina = gasolina;
+    }
+
+    acelerar(km){
+        let consumo = km / 14;
+
+        this.gasolina -= consumo;
     }
 
 
@@ -22,5 +30,17 @@ class Carro {
 let argo = new Carro('argo','preto',20);
 
 argo.abastecer(12);
+
+console.log(argo);
+
+argo.acelerar(22);
+
+console.log(argo);
+
+argo.acelerar(88);
+
+console.log(argo);
+
+argo.abastecer(20);
 
 console.log(argo);
